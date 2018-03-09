@@ -1,0 +1,66 @@
+:host{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.rate_wrapp{
+    display: flex;
+    margin-top: 2em;
+}
+.star_wrapp{
+    display: flex;
+    margin-left: 1em;
+}
+.rate_text{
+    width: 100%;
+    resize: none;
+    min-height: 5em;
+    padding: 0.8em;
+    margin-top: 1em;
+}
+.submit{
+    padding: 0.8em 1em;
+    margin: 1em auto 0;
+    display: block;
+}
+.rate_item{
+    display: block;
+}
+.hovered {
+    &:before{
+        color: #f6c150;
+    }
+}
+.currentHovered ~ .rate_item{
+    &:before{
+        color: black
+    }
+}
+
+.choosen {
+    &:before{
+        content: '\e900';
+        color: #dc7c29!important;
+    }
+}
+.disabled{
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+.mistake{
+    color: red;
+    background: rgba(255, 0, 0, 0.11);
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 0.8em 0;
+}
